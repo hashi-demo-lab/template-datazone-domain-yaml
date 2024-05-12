@@ -1,7 +1,7 @@
 provider "awscc" {
-    region = var.region
+    region = local.datazone_domain.region
 }
 
 provider "aws" {
-    region = var.region
+    region = local.datazone_domain.region
 }

@@ -1,13 +1,8 @@
 data "aws_caller_identity" "current" {}
 
 locals {
-  datzone_config          = yamldecode(file("${path.module}${var.datazone_domain_yaml_file}"))
+  datzone_config          = yamldecode(file("${path.module}/config/${var.datazone_domain_yaml_file}"))
   datazone_domain   = local.datzone_config.datazone
-}
-
-output "datzone_config" {
-  value = local.datzone_config
-  description = "datazone yaml"
 }
 
 
