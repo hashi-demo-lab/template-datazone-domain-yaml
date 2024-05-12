@@ -1,5 +1,10 @@
+variable "datazone_domain_yaml_file" {
+  description = "full path for datazone yaml"
+  type        = string
+}
 
-variable "datazone_domain_name" {
+
+/* variable "datazone_domain_name" {
   description = "The name of the aws datazone domain"
   type        = string
 }
@@ -75,4 +80,4 @@ variable "datazone_projects" {
       glossary_terms = null
     }
   }
-}
+} */
