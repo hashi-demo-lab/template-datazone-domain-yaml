@@ -49,8 +49,9 @@ export AWS_DEFAULT_REGION=ap-southeast-2
 export AWS_ACCESS_KEY_ID="$${CREDENTIALS[0]}"
 export AWS_SECRET_ACCESS_KEY="$${CREDENTIALS[1]}"
 export AWS_SESSION_TOKEN="$${CREDENTIALS[2]}"
-
+sleep 1
 aws datazone create-project-membership --domain-identifier ${each.value.domain_id} --designation PROJECT_OWNER --region ${local.datazone_domain.region} --project-identifier ${each.value.project_id} --member '{"userIdentifier":"arn:aws:iam::855831148133:role/aws_simon.lynch_test-developer"}' --output json || :
+sleep 1
 EOF
   }
 }
