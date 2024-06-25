@@ -8,7 +8,7 @@ locals {
 
 module "datazone_domain" {
   source  = "app.terraform.io/tfc-demo-au/datazone-domain/awscc"
-  version = "~>  0.2.5"
+  version = "~>  0.2.7"
 
   aws_account                 = data.aws_caller_identity.current.account_id
   datazone_domain_name        = local.datazone_domain.datazone_domain_name
